@@ -1,0 +1,167 @@
+\typeout{IJCAI-13 Instructions for Authors}
+\documentclass{article}
+\usepackage{ijcai13}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+
+\title{Modèle d'apprentissage et décrochage scolaire}
+\author{S. Fischman  I. Boukadida I. Ramoul\\
+Université de Nice\\
+France \\
+fischsylv@gmail.com imenboukadida@hotmail.com ines.ramoul@gmail.com}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  L'objectif de l'étude est de mettre en évidence le {\it décrochage scolaire} dans une classe homogène, où tous les élèves ont les mêmes chances et la même probabilité de réussir. On pourrait penser que le décrochage scolaire n'existe pas dans une telle configuration, cependant ce n'est pas le cas. 
+  
+  Pour cette étude on s'intéressera à deux contexte, le premier concernant le travail individuel et le second la dynamique de groupe.
+  
+  On remarque après plusieurs modélisations que certains élève se détachent de la masse et ne bénéficient plus de la synergie du travail de groupe. On va donc chercher à voir si une intervention pédagogique représentée par un repositionnement des élèves pourrait améliorer les conditions de travail.
+  
+  [résultats avec repositionnement]
+  
+  [conclusion] 
+\end{abstract}
+
+
+\section{Introduction}
+Le décrochage scolaire est le phénomène qui conduit une personne suivant une formation à abandonner le système de formation, sans avoir acquis les compétences requise à la validation de la formation. Il prend en compte plusieurs facteurs différents :
+\begin{enumerate}
+\item En milieu scolaire
+\begin{itemize}
+\item absentéisme
+\item non respect des règles
+\item isolement
+\end{itemize}
+\item Au sein de la famille
+\begin{itemize}
+\item temps de travail personnel
+\item difficultés familiales
+\item organisation
+\end{itemize}
+\end{enumerate}
+
+
+
+\subsection{État de l'art}
+
+Des études ont déjà été réalisées sur le Peer Learning, Sandip Sen et Gerhard Weiss ont rédigé un article \textit{Learning in Multiagent Systems} \footnote{http://www.ukma.edu.ua/~gor/Agents/Refs/sen-weiss-MAL99.pdf} où plusieurs points ont été mis en évidence.
+
+	Les activités d'apprentissage d'un agent individuel peuvent être considérablement influencées par d'autres agents car plusieurs agents peuvent apprendre de façon distribuée ou bien interactive, comme un ensemble cohérent unique. Il distingue deux catégories principales d'apprentissage : soit centralisé (individu seul), soit décentralisé (en groupe de façon interactive).
+
+	Plusieurs fonctionnalités sont à prendre en compte dans la réalisation d'un modèle d'apprentissage décentralisé :
+\begin{itemize}
+	\item Le niveau d'interaction : qui représente la pertinence de l'échange entre les agents
+	\item La persistance de l'interaction
+	\item La fréquence de l'interaction
+	\item Le modèle de l'interaction : suivant un modèle hiérarchisé ou non 
+\end{itemize}	  	 
+
+		Les relations entres les agents sont aussi prises en compte. Ils peuvent agir en groupe pour résoudre des problèmes, et peuvent influencer les autres suivant les domaines de préférence.
+		 
+\subsection{Contexte}
+
+Nous nous intéressons à une classe composée de plusieurs élèves. Chaque élève possède les mêmes probabilités de réussite que ses camarades. Un élève a deux façons de progresser soit en travaillant seul soit en se faisant aider par ses camarades. Les élèves doivent atteindre un niveau en un temps donné. Tous les élèves qui mettent plus de temps que les autres à atteindre le niveau sont considérés en décrochage.
+
+	Pour se faire aider, nous considérons trois stratégies différentes :\\
+\underline{Stratégie 1 :} $NiveauEleveAidant = NiveauEleveAide + \Delta$\\
+\underline{Stratégie 2 :} $NiveauEleveAidant >= NiveauEleveAide + \Delta$\\
+\underline{Stratégie 3 :} $NiveauEleveAidant e [NiveauEleveAide + \Delta]$\\
+
+\subsection{Questions scientifiques}
+
+
+
+ 
+
+\section{Modélisation}
+
+Afin de modéliser le peer learnig et de mettre en évidence le décrochage scolaire nous avons modélisé une classe en utilisant netlogo. Le modèle était représenté en 2D avec des tortues positionnées initialement en bas du canvas, et qui montent progressivement suivant un tirage probabilisé, jusqu'à atteindre le niveau maximum.  
+
+
+\subsection{Hypothèses simplificatrices}
+D'après un raisonnement naïf, on pourrait penser que tous les élèves évoluent de la même manière. D'après le modèle de l'étude, tous les élèves ont les mêmes probabilités de réussite ils doivent donc arriver tous à peu de chose près en même temps au {\it top level}.
+
+
+\subsection{Description du modèle}
+
+Nous avons utilisé 100 turtles pour représenter les éléves qui démarrent au bas du canvas. Chaque élèves possède :
+\begin{itemize}
+\item une probabilité {\bf p} de réussir en travaillant seul, que l'on peut faire varier entre 0.5 et 1. 
+\item une probabilité {\bf q} de réussir en travaillant en groupe que l'on peut faire varier entre 0.5 et 1. 
+\end{itemize}
+Pour chaque "top d'horloge", un tirage est effectué pour chaque élève. S'il réussi le test il progresse, sinon il peut se faire aider.\\
+Un élève peut se faire aider uniquement par son voisin de droite ou bien par celui de gauche. Suivant la stratégie choisie 
+
+\section{Simulation}
+
+
+
+\subsection{Cadre expérimental}
+
+
+
+\subsection{Protocole expérimental}
+
+
+
+\section{Résultats}
+
+
+
+\section{Discussion}
+
+
+
+\section{Conclusion}
+
+
+\bibliographystyle{named}
+\bibliography{ijcai13}
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
