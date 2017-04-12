@@ -1,3 +1,4 @@
+;salut
 globals [max-level mean-learning-time drop-out dernier-tick nom-fichier max-delta-level]
 turtles-own[level learning-time bonus]
 
@@ -132,8 +133,8 @@ end
 GRAPHICS-WINDOW
 205
 10
-617
-469
+618
+470
 -1
 -1
 13.0
